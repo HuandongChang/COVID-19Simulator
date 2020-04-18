@@ -69,5 +69,7 @@ Rate of infection = Duration * Opportunity * Transmission probability * Suscepti
 
 ## Reference
 https://github.com/AzizZayed/Virus-Spread-Simulation
+
 https://www.nytimes.com/2020/03/05/health/coronavirus-deaths-rates.html?referringSource=articleShare
+
 https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30243-7/fulltext
