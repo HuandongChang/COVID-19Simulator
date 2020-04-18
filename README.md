@@ -9,6 +9,15 @@ Download the four source files in src folder, and compile and run VirusSpreadSim
 
 ## Demos
 
+### The first demos shows the simulation of large population, small hospital capacity, and without quarantine.
+![](Demos/NoQ.gif)
+
+
+
+
+### The second demos shows the simulation of small population, large hospital capacity, and with quarantine.
+![](Demos/W/Q.gif)
+
 ## Functions and Features
 In this simplified simulation, we assume the population is randomly located in a city and ignore all kinds of facilities except for a hospital. Features of our simulator include but are not limited to:
 
