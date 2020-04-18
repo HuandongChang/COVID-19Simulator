@@ -32,6 +32,7 @@ In this simplified simulation, we assume the population is randomly located in a
 #### Model
 
 The features of this project serve the R = DOTS formula for person-to-person transmission. 
+
 Rate of infection = Duration * Opportunity * Transmission probability * Susceptibility.
 
 #### Data and Calculation
@@ -42,15 +43,24 @@ Rate of infection = Duration * Opportunity * Transmission probability * Suscepti
 - Every person has 50%-90% chance of getting infected, positively corrected to the age. Sick state will last for 14 days after infected for everyone, then turn into Hospitalize State.
 - After turning into Hospitalize State, this patient will recover after 14 to 42 days, positively correlated to the age except the patient dies. Note the getting into hospital can halve the recovery time.
 - Death rate for different ages
-[Estimates of the severity of coronavirus disease 2019: a model-based analysis](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30243-7/fulltext):
+[(Estimates of the severity of coronavirus disease 2019)](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30243-7/fulltext):
+
 0-10: 0.0000161
+
 10-20:0.0000695
+
 20-30: 0.000309
+
 30-40: 0.0844
+
 40-50: 0.0016
+
 50-60: 0.00595
+
 60-70: 0.0193
+
 70-80: 0.0428
+
 80-: 0.078
 
 
