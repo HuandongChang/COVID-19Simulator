@@ -9,14 +9,14 @@ Download the four source files in the src folder, and compile and run VirusSprea
 
 ## Demos
 
-### The first demo shows the simulation of a large population, small hospital capacity, and without quarantine.
-![](Demos/NoQ.gif)
+### The first demo shows the simulation of a small population, large hospital capacity, and without quarantine.
+![](Demos/Demo1.gif)
 
 
 
 
-### The second demos shows the simulation of a small population, large hospital capacity, and with quarantine.
-![](Demos/WithQ.gif)
+### The second demos shows the simulation of a large population, small hospital capacity, and with quarantine.
+![](Demos/Demo2.gif)
 
 ## Functions and Features
 In this simplified simulation, we assume the population is randomly located in a city and ignore all kinds of facilities except for a hospital. Features of our simulator include but are not limited to:
