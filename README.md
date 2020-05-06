@@ -5,7 +5,7 @@ In this project, we use the Java DrawingPanel package to simulate the spread of 
 Authors: Jun Seok Choi, Mingyang Fan, Huandong Chang
 
 ## Run the Code
-Download the four source files in the src folder, and compile and run VirusSpreadSimulator.java file in your terminal.
+Download the five source files and two jar files (as external libraries) in the src folder. Run VirusSpreadSimulator.java File. Detailed description is in RunCode.docx File.  
 
 ## Demos
 
