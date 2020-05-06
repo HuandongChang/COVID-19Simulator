@@ -1,3 +1,5 @@
+package virusSpreadSimulatorFinal;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -17,7 +19,7 @@ public class Person {
 	private static final float MAX_SPEED = 1.5f;
 	//private float probHospitalize = 0.01f; // probability of getting HOSPITALIZE after getting sick
 	//Death Rate for different age range
-	private static final float[] DeathRate=new float[]{0.0000161f,0.0000695f,0.000309f,0.0844f,0.00161f,0.00595f,0.0193f,0.0428f,0.078f};
+	private static final float[] DeathRate=new float[] {0.09000161f,0.09000695f,0.0900309f,0.0844f,0.090161f,0.00595f,0.0193f,0.0428f,0.078f};
 	private int size; // diamater of the circle representing the person
 	private int x, y; // position
 	private float xVel = 0, yVel = 0; // velocity components
@@ -37,12 +39,12 @@ public class Person {
 	/*
 	 * possible states of a person
 	 */
-	 private enum State {
- 		HEALTHY,
- 		RECOVERED,
- 		SICK,//No Sympotom(Not HOSPITALIZE)
- 		DEATH,
- 		HOSPITALIZE
+	 public enum State {
+ 		HEALTHY, // green
+ 		RECOVERED, // blue
+ 		SICK,//No Sympotom(Not HOSPITALIZE) pink
+ 		DEATH, // white
+ 		HOSPITALIZE //red
  	}
 
 	private State state = State.HEALTHY; // state of the person, default healthy
@@ -62,24 +64,29 @@ public class Person {
 		x = rand.nextInt(w/4 * 3 - size) + (w / 4);
 		y = rand.nextInt(h - size);
 
-		age=rand.nextInt(90);
+		int[] arr = {5, 15, 25, 35, 45, 55, 65, 75, 80};
+		int randomNumIndex = rand.nextInt(arr.length);
+		//int randomIndex = Random.nextInt(arr.length);
+		//int randomVal = arr[randomIndex];
 
+		age = arr[randomNumIndex];
+		//age=rand.nextInt(80);
 
 		//probSick ranges from 50% to 90%, depending on age
-		probSick=0.5f+(float)age*0.4f/(float)90;
+		probSick=0.5f+(float)age*0.4f/(float)80;
 
 		//Recovery takes 14 days to 42 days, depending on your age
-		recoveryTime=(14+42*age/(float)(14*90))*400;
+		recoveryTime=(14+42*age/(float)(14*80))*400;
 
 		//Daily Death Prob: Death Rate divided by recover time
 		deathProb=DeathRate[age/10]/((14+42*age/(float)(14*80))*400);
 
 
 		while ((int) xVel == 0)
-			xVel = MIN_SPEED+2.5f*rand.nextFloat()*(float)Math.sqrt(100-age)/(float)Math.sqrt(90);
+			xVel = MIN_SPEED+2.5f*rand.nextFloat()*(float)Math.sqrt(100-age)/(float)Math.sqrt(80);
 
 		while ((int) yVel == 0)
-			yVel = MIN_SPEED+2.5f*rand.nextFloat()*(float)Math.sqrt(100-age)/(float)Math.sqrt(90);
+			yVel = MIN_SPEED+2.5f*rand.nextFloat()*(float)Math.sqrt(100-age)/(float)Math.sqrt(80);
 	}
 
 	/**
@@ -105,9 +112,11 @@ public class Person {
 	}
 
 
-
+		/**
+		 * Set the time a patient get into hospital
+		 */
 	public void setHospitalTime(long ti) {
-		HospitalTime=ti;
+		HospitalTime = ti;
 	}
 
 	/**
@@ -196,18 +205,30 @@ public class Person {
 		return size;
 	}
 
+	/**
+	 * @return position(x)
+	 */
 	public int getX() {
 		return x;
 	}
 
+	/**
+	 * @return position(y)
+	 */
 	public int getY() {
 		return y;
 	}
 
+	/**
+	 * @return set position(x)
+	 */
 	public void setX(int x) {
 		this.x = x;
 	}
 
+	/**
+	 * @return set position(y)
+	 */
 	public void setY(int y) {
 		this.y = y;
 	}
@@ -245,6 +266,14 @@ public class Person {
 		g.fillOval(x, y, size, size);
 	}
 
+	/**
+	 * Update the person position and state
+	 *
+	 * @param xWalls -> walls in the x-axis
+	 * @param xWalls -> walls in the y-axis
+	 * @param w -> width of the city
+	 * @param h -> height of the city
+	 */
 	public void update(int[] xWalls, int[] yWalls, int w, int h) {
 
 		x += xVel;
@@ -288,16 +317,11 @@ public class Person {
 		return collided;
 	}
 
-
-	// public boolean checkHospitalize() {
-	// 	if(state == State.SICK)
-	// 		if(Hospital.checkNotFull()) {
-	// 			setHospitalize();
-	// 			return true;
-	// 		}
-	// 	return false;
-	// }
-
+	/**
+	 * check whether a patient is hospitalized
+	 *
+	 * @return true if a patient is hospitalized, false if otherwise
+	 */
 	public boolean checkHospitalize() {
 		if(state == State.HOSPITALIZE)
 			return true;
@@ -305,6 +329,9 @@ public class Person {
 			return false;
 	}
 
+	/**
+	 * set a patient to recovery state
+	 */
 	public void setRECOVERY() {
 		state = State.RECOVERED;
 	}
