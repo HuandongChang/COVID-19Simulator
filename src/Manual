@@ -1,0 +1,9 @@
+Things to Expect when running the program.
+
+When you run the VirusSpreadSimulator class, you should get a four pop-up windows: one that displays the simulation, and three for graphs (infections, patients, deaths). 
+
+At any time when you run the program, you can press M for the menu button to change the settings to see how the virus spreads in this new setting. However, when you do so, the graph and data that is stored in the csv file will not be updated. This is because we have used the Swingworker class and from our knowledge, the graphs and data storage can only be executed once. 
+
+But one thing you can do is to just run the program with no quarantine (Quarantine = false) and then press the Q button on your keyboard and it will automatically set up the quarantining. In this case, you can see how the graph will change when you start quarantining and the data that is stored in the csv file will also show this update. 
+To run the simulation under a setting that is different from the default setting, you can run the program and directly go to settings and set the population and hospital capacity to what you want. However, the Quarantine should still start out as false. Run the program and if you want to add quarantine after a few days, press the Q button to accomplish that task. If you follow these steps, you should be able to view the graphs as well as record the data in the csv file accurately. 
+
