@@ -4,6 +4,9 @@ In this project, we use the Java DrawingPanel package to simulate the spread of 
 
 Authors: Jun Seok Choi, Mingyang Fan, Huandong Chang
 
+## Presentation
+See Presentation.pdf for our Presentation
+
 ## Run the Code
 Download the five source files and two jar files (as external libraries) in the src folder. Run VirusSpreadSimulator.java File. Detailed description is in RunCode.docx File.  
 
@@ -18,10 +21,14 @@ Download the five source files and two jar files (as external libraries) in the 
 ### The second demos shows the simulation of a large population, small hospital capacity, and with quarantine.
 ![](Demos/Demo2.gif)
 
+
+
 ## Functions and Features
 In this simplified simulation, we assume the population is randomly located in a city and ignore all kinds of facilities except for a hospital. Features of our simulator include but are not limited to:
 
-- Hospital: The only facility in the city is a hospital. The hospital will continue to accept patients until they are full. Patients will be removed from the hospital once they are recovered or dead. Users can adjust the capacity of the patient.
+- Menu is designed for user to adjust variables in the simulator. Detailed Manu Instruction is attached.
+
+- Hospital: The only facility in the city is a hospital. The hospital will continue to accept patients until they are full. Patients will be removed from the hospital once they are recovered or dead. Users can adjust the capacity of the hospital.
 
 - Each Person has several features: age, speed, probability of being infected, recovery time after infected, and death probability.
 
@@ -32,10 +39,11 @@ In this simplified simulation, we assume the population is randomly located in a
   - Recovered: Blue, once a person is cured by the hospital. 
   - Death: Disappear, once a person is turned into Hospitalize State, this patient has a certain chance to die. 
   
-- Quarantine Mode: People can choose the quarantine mode, then each person will be limited to a certain area without interacting with people in other areas.
+- Quarantine Mode: People can choose the quarantine mode, then each person will be limited to a certain area without interacting with people in other areas. Quarantine level can be adjusted through Menu.
 
-- Population Density: Users can adjust population density either by adjusting the number of people in the city or enlarge or reduce the city size using the mouse.
+- Population Density: Users can adjust population (density) through Menu.
 
+- Live Chart: User can see the live chart of the current cases of infection, the current number of patients, and the current death. A CSV file including all the useful variables in this simulator will be automatically exported for further data analysis.
 
 
 ## Models and Calculations
