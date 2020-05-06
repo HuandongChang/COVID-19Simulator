@@ -43,7 +43,7 @@ In this simplified simulation, we assume the population is randomly located in a
 
 - Population Density: Users can adjust population (density) through Menu.
 
-- Live Chart: User can see the live chart of the current cases of infection, the current number of patients, and the current death. A CSV file including all the useful variables in this simulator will be automatically exported for further data analysis.
+- Live Chart: User can see the live chart of the current cases of infection, the current number of patients, and the current cases of death. A CSV file including all the useful variables in this simulator will be automatically exported, and user can do further data analysis.
 
 
 ## Models and Calculations
@@ -82,8 +82,8 @@ Rate of infection = Duration * Opportunity * Transmission probability * Suscepti
 
 80-: 0.078
 
-
-
+## Analysis
+In the attached Analysis.docx File, we compared and analyzed the effect of quarantine, the effect of population size, and the effect of hospital capacity.
 
 
 ## Reference
