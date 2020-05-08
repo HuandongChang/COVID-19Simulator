@@ -8,7 +8,7 @@ Authors: Jun Seok Choi, Mingyang Fan, Huandong Chang
 See Presentation.pdf for our Presentation
 
 ## Run the Code
-Download the five source files and two jar files (as external libraries) in the src folder. Run VirusSpreadSimulator.java File. Detailed description is in RunCode.docx File.  
+Download the five source files and two jar files (as external libraries) in the src folder. Run VirusSpreadSimulator.java File. Detailed description is in RunCode.docx File or Code&Menu_Instructions.pdf Presentation.  
 
 ## Demos
 
@@ -26,7 +26,7 @@ Download the five source files and two jar files (as external libraries) in the 
 ## Functions and Features
 In this simplified simulation, we assume the population is randomly located in a city and ignore all kinds of facilities except for a hospital. Features of our simulator include but are not limited to:
 
-- Menu is designed for user to adjust variables in the simulator. Detailed Manu Instruction is attached.
+- Menu is designed for user to adjust variables in the simulator. See Code&Menu_Instructions.pdf or Menu Instructions.docx for detailed Manu Instruction.
 
 - Hospital: The only facility in the city is a hospital. The hospital will continue to accept patients until they are full. Patients will be removed from the hospital once they are recovered or dead. Users can adjust the capacity of the hospital.
 
