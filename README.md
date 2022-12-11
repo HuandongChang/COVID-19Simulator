@@ -2,7 +2,7 @@
 ## Introduction
 In this project, we use the Java DrawingPanel package to simulate the spread of COVID-19 under different circumstances, such as medical conditions, social distancing, population density, etc. The purpose of this project is to show the effects of changing one or more of the factors that may potentially influence the spread of Coronavirus.
 
-Authors: Jun Seok Choi, Mingyang Fan, Huandong Chang
+Authors: Huandong Chang, Jun Seok Choi, Mingyang Fan 
 
 ## Presentation
 See Presentation.pdf for our Presentation
